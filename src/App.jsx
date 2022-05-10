@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer hey={'Hi, I am the container component'} />
+      <ItemListContainer  />
     </div>
   );
 }
