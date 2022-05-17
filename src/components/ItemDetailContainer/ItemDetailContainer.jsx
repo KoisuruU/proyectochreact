@@ -6,19 +6,21 @@ import { getFetch } from '../../helpers/getFetch'
 
 const ItemDetailContainer = () => {
     const [loader, setLoader] = useState(true);
-    const [prod, setProductList] = useState([]);
+    const [product, setProduct] = useState({});
     const { id } = useParams()
 
     useEffect(() => {
         getFetch(id)  // fetch llamada a una api  
-        .then(response=> setProductList(response.find(prod => prod.id === id)))
+        .then(response=> setProduct(response))
         .catch((err)=> console.log(err))
-        .finally(()=>setLoader(false))     
+        // .finally(()=>setLoader(false))     
     }, [])
-// console.log(productList)
+console.log(product)
+console.log(id)
+
     return (
         <div>
-            <ItemDetail product={productList}  />
+            <ItemDetail product={product}  />
         </div>
     )
 }
