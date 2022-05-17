@@ -3,6 +3,7 @@ import Item from '../Item/Item';
 import { productList } from '../../data/data';
 
 import '../styles/ItemList.css'
+import { Link } from 'react-router-dom';
 
 const ItemList = () => {
     const [products, setProducts] = useState([]);
@@ -42,7 +43,7 @@ const ItemList = () => {
                                 price={product.price}
                                 stock={product.stock}
                                 id={product.id}
-                            />
+                                />
                         </div>
                             );
             })
