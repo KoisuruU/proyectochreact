@@ -15,8 +15,8 @@ const ItemDetailContainer = () => {
         .catch((err)=> console.log(err))
         // .finally(()=>setLoader(false))     
     }, [])
-console.log(product)
-console.log(id)
+// console.log(product)
+// console.log(id)
 
     return (
         <div>
