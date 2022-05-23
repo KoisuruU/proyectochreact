@@ -2,10 +2,10 @@ import { productList } from "../data/data";
 
 
 
-export const getFetch = (id) => {
+export const getFetch = (category) => {
     return new Promise((resolve)=>{
         setTimeout(()=>{
-                const idProd = id ? productList.find(product => product.id === id ) : productList                                 
+                const idProd = category ? productList.find(product => product.category === category ) : productList                               
                 resolve( idProd )                           
             }, 2000)
         })            

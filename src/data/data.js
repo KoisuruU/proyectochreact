@@ -6,7 +6,7 @@ export const productList = [
     stock: 10,
     id: "1",
     description: "The Billage of Perception : Chapter One (stylized as the Billage of perception : chapter one) is the debut mini album by Billlie. It was released on November 10, 2021 with Ring x Ring serving as the album's title track. ",
-    category: "FirstMiniAlbum ",
+    category: "FirstMiniAlbum "
     },
     {
     name: 'The Collective Soul and Unconscious: Chapter One - Soul Version',
