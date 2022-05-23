@@ -8,12 +8,12 @@ const ItemListContainer = ( { hey='Hey' } ) => {
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(true)
 
-  const { id } = useParams() 
+  const { cat } = useParams() 
 
     useEffect(() => {
-        if (id) {
+        if (cat) {
             getFetch()  // fetch llamada a una api  
-            .then(respuesta=> setProducts(respuesta.filter((prods) => prods.category === id)))
+            .then(respuesta=> setProducts(respuesta.filter((prods) => prods.category === cat)))
             .catch((err)=> console.log(err))
             .finally(()=>setLoading(false))                             
         } else {
@@ -22,13 +22,13 @@ const ItemListContainer = ( { hey='Hey' } ) => {
             .catch((err)=> console.log(err))
             .finally(()=>setLoading(false))                 
         }
-    }, [id])
+    }, [cat])
 
     // function onAdd(cant) {
     //     console.log(cant)
     // }
     
-    console.log(id)
+    console.log(cat)
 
 
   return (
