@@ -1,7 +1,8 @@
 import ItemList from "../ItemList/ItemList"
 import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getFetch } from "../../helpers/getFetch"
+import { getFetch } from "../../data/data"
+// import { getFetch } from "../../helpers/getFetch"
 
 
 const ItemListContainer = ( { hey='Hey' } ) => {

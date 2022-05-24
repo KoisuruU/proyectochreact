@@ -1,11 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
-
+import { useNavigate } from "react-router-dom";
 import '../styles/ItemCount.css';
 
 const ItemCount = ({ initial, stock, onAdd }) => {
 
     const [qty, setQty] = useState(initial);
+    const [showButton, setshowButton] = useState(false);
+
+    // let navigate = useNavigate();
 
     const addProduct = (num) => {
         setQty(qty + num);

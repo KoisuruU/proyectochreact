@@ -1,13 +1,20 @@
 import Item from "../Item/Item"
-import React from "react"
+import React, { useState } from "react"
 import ItemCount from "../ItemCount/ItemCount"
 import '../styles/ItemDetail.css'
 import { CartContext, useCartContext } from "../../context/cartContext"
 import { useContext } from "react"
+import { BuyButton } from "../BuyButton/BuyButton"
 
-const ItemDetail = ({product}) => {
-  const useCartContext = useContext(CartContext)
-  const {addToCart} = useCartContext;
+const ItemDetail = ({product, onAdd}) => {
+  
+  // const [inputType, setInputType] = useState('itemCount');
+
+  // function handleInputType() {
+  //   setInputType('buyButtons')
+  // }
+  // const CartContext = useContext(CartContext)
+  // const {addToCart} = useCartContext;
 
   // const onAdd = (qty) => {
   //   console.log(qty)
@@ -27,7 +34,8 @@ const ItemDetail = ({product}) => {
           <li>Price: US${product.price}</li>
           <li>Stock: {product.stock} copies</li>
         </ul>
-        <ItemCount stock={product.stock} initial={1} onAdd={addToCart} />
+        <ItemCount stock={product.stock} initial={1} onAdd={onAdd} />
+        <BuyButton/>
       </div>
     </article>
   )

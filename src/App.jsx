@@ -18,7 +18,7 @@ function App() {
 console.log(CartContext);
   return (
     <BrowserRouter>
-      <CartContextProvider>
+      {/* <CartContextProvider> */}
         <div className="App">
           <NavBar />
 
@@ -33,7 +33,7 @@ console.log(CartContext);
           </Routes>
 
         </div>
-      </CartContextProvider>
+      {/* </CartContextProvider> */}
     </BrowserRouter>
   );
 }
